@@ -1,14 +1,28 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TongueCutter : MonoBehaviour
-{
+public class TongueCutter : MonoBehaviour {
 
-    private void OnTriggerEnter2D(Collider2D other) {
-        if (other.tag == "Tooth") {
-            Debug.Log("Amputation");
-        }
+    [SerializeField] private Tooth tooth;
+
+    private void Start() {
+        tooth.OnToothTouch += checkDamageTongue;
+        tooth.OnToothClamp += checkDestroyTongue;
+    }
+
+    private void checkDestroyTongue(GameObject tooth) {
+        // Don't need tooth in this method
+        
+        // TODO if tongue in range, destroy
+    }
+    
+    private void checkDamageTongue(GameObject tooth) {
+        // Don't need tooth in this method
+        
+        // TODO if tongue in range, damage
+
     }
 
 }

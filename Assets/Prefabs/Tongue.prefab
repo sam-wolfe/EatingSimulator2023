@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2601476803435407923}
   - component: {fileID: 2601476803435407922}
   - component: {fileID: 2601476803435407921}
-  - component: {fileID: 2601476803435407924}
   - component: {fileID: 2601476803435407925}
+  - component: {fileID: 4245011302947934713}
   m_Layer: 6
   m_Name: Square (2)
   m_TagString: Untagged
@@ -108,20 +108,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2601476803435407924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2601476803435407920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4573158d8e9933f46a829d832e28fc08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _input: {fileID: 0}
-  speed: 1500
 --- !u!61 &2601476803435407925
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -148,6 +134,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &4245011302947934713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2601476803435407920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae8d3e490b3e96943ae7ef0d0fecd1a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _input: {fileID: 0}
+  speed: 0
 --- !u!1 &2601476804030041761
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,7 +430,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -1.0470585, y: 0}
+  m_ConnectedAnchor: {x: -1.0470587, y: 0}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -454,7 +454,7 @@ SliderJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -3.789999, y: -1.4399999}
+  m_ConnectedAnchor: {x: -0.5512165, y: 0}
   m_AutoConfigureAngle: 1
   m_Angle: 0
   m_UseMotor: 1
@@ -487,6 +487,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2601476804757603577}
+  - component: {fileID: 3596315954235495965}
   m_Layer: 6
   m_Name: Tongue
   m_TagString: Untagged
@@ -512,3 +513,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3596315954235495965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2601476804757603576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36723b9e1ff1f04479e438096f26df86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooth: {fileID: 0}
