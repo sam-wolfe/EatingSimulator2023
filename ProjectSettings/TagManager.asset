@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Tooth
   - Gums
+  - Food
+  - Throat
   layers:
   - Default
   - TransparentFX

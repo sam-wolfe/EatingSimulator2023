@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 1650316231183834, guid: c2a6d2b0d24011c4293152c687d43372, type: 3}
   chewCount: 2
-  radius: 3
+  radius: 4

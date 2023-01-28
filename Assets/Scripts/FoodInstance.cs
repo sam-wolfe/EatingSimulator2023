@@ -1,3 +1,5 @@
+using System;
+using DefaultNamespace;
 using UnityEngine;
 
 public class FoodInstance : MonoBehaviour {
@@ -10,8 +12,22 @@ public class FoodInstance : MonoBehaviour {
         chews = foodSettings.chewCount;
     }
 
-    void Update()
-    {
-        
+    public void Chew() {
+        if (chews > 0) {
+            chews--;
+        }
     }
+
+    public bool IsChewed() {
+        return chews == 0;
+    }
+    
+    // private void OnCollisionEnter2D(Collision2D col) {
+    //     IFoodProcessor foodProcessor = col.gameObject.GetComponent<IFoodProcessor>();
+    //     if (foodProcessor != null) {
+    //         foodProcessor.IncomingFood(this);
+    //         Debug.Log("apple");
+    //     }
+    // }
+
 }
