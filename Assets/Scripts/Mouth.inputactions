@@ -33,7 +33,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Cough",
+                    "name": "Swallow",
                     "type": "Value",
                     "id": "08e498e7-1686-48a5-a99c-72ba501455da",
                     "expectedControlType": "Axis",
@@ -45,6 +45,15 @@
                     "name": "Groan",
                     "type": "Button",
                     "id": "4bca5a0f-cc96-480f-a064-84c72429f38a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Cough",
+                    "type": "Button",
+                    "id": "583a7764-f6f0-46d4-9b92-9cf69b44200b",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -92,7 +101,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Cough",
+                    "action": "Swallow",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -104,6 +113,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Groan",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c76b17ab-f55c-4207-b58d-4373441f43ae",
+                    "path": "<DualShockGamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Cough",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

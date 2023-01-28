@@ -5,7 +5,6 @@ using UnityEngine;
 public class FoodInstance : MonoBehaviour {
 
     [SerializeField] private Food foodSettings;
-    // private ChewHandler _chewHandler;
     private MeshFilter _meshFilter;
     private MeshRenderer _meshRenderer;
     
