@@ -16,7 +16,7 @@ public class InputManager : MonoBehaviour {
 
     public void OnJaw(InputAction.CallbackContext context) {
         jaw = context.ReadValue<float>();
-        Debug.Log(jaw);
+        // Debug.Log(jaw);
     }
 
 }
