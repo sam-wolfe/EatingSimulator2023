@@ -1,0 +1,54 @@
+{
+    "name": "Mouth",
+    "maps": [
+        {
+            "name": "Gamepad",
+            "id": "20b6b24b-3421-435c-9188-85fcd639e195",
+            "actions": [
+                {
+                    "name": "Tongue",
+                    "type": "PassThrough",
+                    "id": "7dd1c823-efb4-46c0-a396-d255ca6aa6e5",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Fork",
+                    "type": "PassThrough",
+                    "id": "21b19608-b441-44b6-a84b-e108fa642b57",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d5dd33e7-7645-42ef-a16f-179e8e43d3fa",
+                    "path": "<DualShockGamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Tongue",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "64e82979-b39e-40ab-abdb-41820439f4ec",
+                    "path": "<DualShockGamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fork",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
