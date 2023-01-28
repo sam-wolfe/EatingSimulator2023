@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0236b21008df2b746ba683dd8682b6de, type: 3}
-  m_Name: TestFood
+  m_Name: Banana
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1650316231183834, guid: c2a6d2b0d24011c4293152c687d43372, type: 3}
-  chewCount: 2
-  radius: 4
+  prefab: {fileID: 1636851566603426, guid: a0af307e497d54e46b1856faa821c84f, type: 3}
+  chewCount: 1
+  radius: 6
   chewedMesh: {fileID: 4300000, guid: e0244f944582bee458cf9ccc1b53b3f4, type: 2}
-  chewedMaterial: {fileID: 2100000, guid: daca03fa4d1a7ff41b27df284c950562, type: 2}
+  chewedMaterial: {fileID: 2100000, guid: 31d4b9e6d3ee09943ae60f807de1e4d7, type: 2}
