@@ -1790,6 +1790,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _input: {fileID: 1258624922}
   chokeForce: 5
+  _throat: {fileID: 378006755}
   foodList: []
 --- !u!1 &1934741540
 GameObject:

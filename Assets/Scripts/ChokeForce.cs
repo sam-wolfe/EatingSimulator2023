@@ -7,6 +7,10 @@ public class ChokeForce : MonoBehaviour
 {
     [SerializeField] private InputManager _input;
     [SerializeField] private int chokeForce;
+    
+    // Bad, hacking because sleep deprived and running out of time for gamejam
+    [SerializeField] private Throat _throat;
+    
     public List<FoodInstance> foodList;
     private void Update() {
         foreach (var food in foodList) {
@@ -20,6 +24,7 @@ public class ChokeForce : MonoBehaviour
         if (_input.cough) {
             Debug.Log("*cough cough*");
             _input.cough = false;
+            _throat.ProcessChoking();
         }
         
     }

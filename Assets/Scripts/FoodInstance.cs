@@ -35,6 +35,13 @@ public class FoodInstance : MonoBehaviour {
     public bool IsChewed() {
         return chews == 0;
     }
+
+    public void BlowUp() {
+        // TODO add particle effect
+        // TODO play sound effect
+
+        gameObject.SetActive(false);
+    }
     
     // private void OnCollisionEnter2D(Collision2D col) {
     //     IFoodProcessor foodProcessor = col.gameObject.GetComponent<IFoodProcessor>();
