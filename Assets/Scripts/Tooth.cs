@@ -49,6 +49,8 @@ public class Tooth : MonoBehaviour {
             particleSystem1.Play();
             particleSystem2.Play();
             particleSystem3.Play();
+        } else if (broken) {
+            _audioSource.PlayOneShot(brokenteeth);
         }
     }
 
