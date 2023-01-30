@@ -170,6 +170,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 29925995}
+  - component: {fileID: 29925996}
   m_Layer: 0
   m_Name: ForceProvider
   m_TagString: Untagged
@@ -192,6 +193,22 @@ Transform:
   m_Father: {fileID: 2075004560}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &29925996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29925994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 250627173c248864f938ca4f0368cc7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _input: {fileID: 1258624922}
+  MaxCoughForce: 5
+  CoughDepletionRate: 1
+  CoughRegenRate: 0.1
 --- !u!1001 &115890641
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -209,7 +226,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4049357556114238, guid: 3c3a8236be548bb4c892cf39a5abadfe, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4049357556114238, guid: 3c3a8236be548bb4c892cf39a5abadfe, type: 3}
       propertyPath: m_LocalScale.x
@@ -1201,7 +1218,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _input: {fileID: 1258624922}
   foodList: []
-  chokeForce: 5
 --- !u!1 &331438103
 GameObject:
   m_ObjectHideFlags: 0
@@ -1493,7 +1509,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &397806280
 GameObject:
@@ -1766,7 +1782,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &479335688
 MonoBehaviour:
@@ -2320,7 +2336,7 @@ RectTransform:
   - {fileID: 1550189941}
   - {fileID: 1133991701}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2608,21 +2624,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 367700329618373570, guid: 604f92f1d0c2f9e43b155b30cdad6543, type: 3}
+      propertyPath: m_SortingOrder
+      value: 9000
+      objectReference: {fileID: 0}
+    - target: {fileID: 367700329618373570, guid: 604f92f1d0c2f9e43b155b30cdad6543, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 462b089e5c2e79649b0dec9248a8d1c9, type: 2}
     - target: {fileID: 367700329618373571, guid: 604f92f1d0c2f9e43b155b30cdad6543, type: 3}
       propertyPath: m_Name
       value: Particle System (1)
       objectReference: {fileID: 0}
     - target: {fileID: 367700329618373572, guid: 604f92f1d0c2f9e43b155b30cdad6543, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 367700329618373572, guid: 604f92f1d0c2f9e43b155b30cdad6543, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.07
       objectReference: {fileID: 0}
     - target: {fileID: 367700329618373572, guid: 604f92f1d0c2f9e43b155b30cdad6543, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.53
       objectReference: {fileID: 0}
     - target: {fileID: 367700329618373572, guid: 604f92f1d0c2f9e43b155b30cdad6543, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2654,6 +2678,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 367700329618373572, guid: 604f92f1d0c2f9e43b155b30cdad6543, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 367700329618373573, guid: 604f92f1d0c2f9e43b155b30cdad6543, type: 3}
+      propertyPath: looping
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 367700329618373573, guid: 604f92f1d0c2f9e43b155b30cdad6543, type: 3}
@@ -3836,7 +3864,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &801557195
 MonoBehaviour:
@@ -4189,7 +4217,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &974135236
 GameObject:
@@ -4340,13 +4368,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 367700329618373570, guid: 604f92f1d0c2f9e43b155b30cdad6543, type: 3}
+      propertyPath: m_SortingOrder
+      value: 9000
+      objectReference: {fileID: 0}
+    - target: {fileID: 367700329618373570, guid: 604f92f1d0c2f9e43b155b30cdad6543, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 462b089e5c2e79649b0dec9248a8d1c9, type: 2}
     - target: {fileID: 367700329618373571, guid: 604f92f1d0c2f9e43b155b30cdad6543, type: 3}
       propertyPath: m_Name
       value: Particle System (2)
       objectReference: {fileID: 0}
     - target: {fileID: 367700329618373572, guid: 604f92f1d0c2f9e43b155b30cdad6543, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 367700329618373572, guid: 604f92f1d0c2f9e43b155b30cdad6543, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4386,6 +4422,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 367700329618373572, guid: 604f92f1d0c2f9e43b155b30cdad6543, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 367700329618373573, guid: 604f92f1d0c2f9e43b155b30cdad6543, type: 3}
+      propertyPath: looping
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 367700329618373573, guid: 604f92f1d0c2f9e43b155b30cdad6543, type: 3}
@@ -6644,7 +6684,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _input: {fileID: 1258624922}
-  chokeForce: 5
   _throat: {fileID: 378006755}
   foodList: []
   _audio: {fileID: 1150394581}
@@ -7378,7 +7417,7 @@ Transform:
   - {fileID: 2109457226}
   - {fileID: 1194573786}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2074340923
 GameObject:
@@ -7850,6 +7889,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 367700329618373570, guid: 604f92f1d0c2f9e43b155b30cdad6543, type: 3}
+      propertyPath: m_SortingOrder
+      value: 9000
+      objectReference: {fileID: 0}
+    - target: {fileID: 367700329618373570, guid: 604f92f1d0c2f9e43b155b30cdad6543, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 462b089e5c2e79649b0dec9248a8d1c9, type: 2}
     - target: {fileID: 367700329618373571, guid: 604f92f1d0c2f9e43b155b30cdad6543, type: 3}
       propertyPath: m_Name
       value: Particle System
@@ -7860,7 +7907,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 367700329618373572, guid: 604f92f1d0c2f9e43b155b30cdad6543, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.37
       objectReference: {fileID: 0}
     - target: {fileID: 367700329618373572, guid: 604f92f1d0c2f9e43b155b30cdad6543, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7896,6 +7943,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 367700329618373572, guid: 604f92f1d0c2f9e43b155b30cdad6543, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 367700329618373573, guid: 604f92f1d0c2f9e43b155b30cdad6543, type: 3}
+      propertyPath: looping
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 367700329618373573, guid: 604f92f1d0c2f9e43b155b30cdad6543, type: 3}

@@ -7,17 +7,19 @@ public class CoughForce : MonoBehaviour
 {
     [SerializeField] private InputManager _input;
     public List<FoodInstance> foodList;
-    [SerializeField] private int chokeForce;
 
+    private ForceProvider _forceProvider;
+    
     private void Start() {
         _input.CoughPerformed += HandleCough;
+        _forceProvider = FindObjectOfType<ForceProvider>();
     }
 
     private void HandleCough() {
         foreach (var food in foodList) {
             if (food != null) {
                 food.GetComponent<Rigidbody2D>().AddForce(
-                    Vector2.right*chokeForce, ForceMode2D.Impulse);
+                    Vector2.right*_forceProvider.get(), ForceMode2D.Impulse);
             }
         }
     }

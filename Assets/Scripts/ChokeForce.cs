@@ -7,7 +7,7 @@ using Random = System.Random;
 public class ChokeForce : MonoBehaviour
 {
     [SerializeField] private InputManager _input;
-    [SerializeField] private int chokeForce;
+    private ForceProvider _forceProvider;
     
     // Bad, hacking because sleep deprived and running out of time for gamejam
     [SerializeField] private Throat _throat;
@@ -26,13 +26,14 @@ public class ChokeForce : MonoBehaviour
     
     private void Start() {
         _input.CoughPerformed += HandleCough;
+        _forceProvider = FindObjectOfType<ForceProvider>();
     }
     
     private void HandleCough() {
         foreach (var food in foodList) {
             if (food != null) {
                 food.GetComponent<Rigidbody2D>().AddForce(
-                    Vector2.up*chokeForce, ForceMode2D.Impulse);
+                    Vector2.up*_forceProvider.get(), ForceMode2D.Impulse);
             }
         }
 
