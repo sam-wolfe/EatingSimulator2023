@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour {
 
     [SerializeField] private HungerManager _hungerManager;
+    [SerializeField] private ScoreCaluclator _scoreCaluclator;
 
     [SerializeField]
     private Slider HungerBar;
@@ -23,21 +24,12 @@ public class UIManager : MonoBehaviour {
     private Color initialColor;
     private float hungerBarInitial;
 
-    [SerializeField] private TextMeshProUGUI textmeshparent;
-    [SerializeField] private TextMeshPro textmesh;
-    
-    //------------
-    // This hsouldnt be here
-    public int score;
-
-    public void increaseScore() {
-        score++;
-        textmeshparent.text = score.ToString();
-        // textmesh.text = score.ToString();
-    }
-    // ------
+    [SerializeField] private TextMeshProUGUI scoreText;
     
     void Start() {
+        _scoreCaluclator.OnScoreIncrease += handleIcreaseScore;
+        
+        
         _hungerManager.OnStarve += UpdateHungerBar;
         _hungerManager.OnFoodGain += UpdateHungerBar;
         initialColor = HungerBarFill.color;
@@ -48,8 +40,10 @@ public class UIManager : MonoBehaviour {
         throat.OnClearBlockage += ClearChokebar;
         
         ActualChokeBar.SetActive(false);
-        score = 0;
-        textmesh = textmeshparent.GetComponent<TextMeshPro>();
+    }
+    
+    public void handleIcreaseScore(int score) {
+        scoreText.text = score.ToString();
     }
 
     private void UpdateHungerBar(int foodLevel) {

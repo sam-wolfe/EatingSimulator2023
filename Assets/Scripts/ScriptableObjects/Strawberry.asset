@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0236b21008df2b746ba683dd8682b6de, type: 3}
-  m_Name: Carrot
+  m_Name: Strawberry
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1301151405176600, guid: 276edbcb482a0414d9d3f0ab8ff87abd, type: 3}
+  prefab: {fileID: 1091709128295324, guid: ef2bb32b0cc97d54188e09ea46c9b32e, type: 3}
   chewCount: 3
-  radius: 3
+  radius: 4
   chewedMesh: {fileID: 4300000, guid: e0244f944582bee458cf9ccc1b53b3f4, type: 2}
-  chewedMaterial: {fileID: 2100000, guid: 4e39c5ee2fc4dfb4493d06a9f8de2cb5, type: 2}
+  chewedMaterial: {fileID: 2100000, guid: daca03fa4d1a7ff41b27df284c950562, type: 2}

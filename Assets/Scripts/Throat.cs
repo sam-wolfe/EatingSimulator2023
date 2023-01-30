@@ -57,10 +57,6 @@ public class Throat : MonoBehaviour {
         while (isChoking) {
             yield return new WaitForSeconds(1f);
             airLeft--;
-            if (airLeft <= 0) {
-                // TODO trigger game over
-                
-            }
             OnAirDeplete?.Invoke(airLeft);
         }
     }

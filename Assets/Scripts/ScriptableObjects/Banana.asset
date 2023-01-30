@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Banana
   m_EditorClassIdentifier: 
   prefab: {fileID: 1636851566603426, guid: a0af307e497d54e46b1856faa821c84f, type: 3}
-  chewCount: 6
+  chewCount: 5
   radius: 4
   chewedMesh: {fileID: 4300000, guid: e0244f944582bee458cf9ccc1b53b3f4, type: 2}
   chewedMaterial: {fileID: 2100000, guid: 31d4b9e6d3ee09943ae60f807de1e4d7, type: 2}

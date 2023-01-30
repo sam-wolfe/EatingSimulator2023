@@ -15,3 +15,11 @@ MonoBehaviour:
   foods:
   - {fileID: 11400000, guid: a585ef998db28694e8eb3af398ac88f0, type: 2}
   - {fileID: 11400000, guid: 3f2bd70fac71eaa408b00fdf45f264fc, type: 2}
+  - {fileID: 11400000, guid: bce7bddb815fed0418f43ee0b704fb34, type: 2}
+  - {fileID: 11400000, guid: c79d269acb03ec54b9094f54af1645a0, type: 2}
+  - {fileID: 11400000, guid: c8482fdea418fd74b879bdf9de649bb3, type: 2}
+  - {fileID: 11400000, guid: 4ebd52b84be60024e9241a53e83be9c5, type: 2}
+  - {fileID: 11400000, guid: 0dfa6b2be1d22cf44ba50f4a95165119, type: 2}
+  - {fileID: 11400000, guid: 83c978b3c9d437e4c93cff69e556e9d1, type: 2}
+  - {fileID: 11400000, guid: 68e4385b792718d46a11ce7fd77ba00f, type: 2}
+  - {fileID: 11400000, guid: dc82377f5bdaa7e4a8cb4ed4e428dcbf, type: 2}

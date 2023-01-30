@@ -14,7 +14,6 @@ public class ChokeForce : MonoBehaviour
     
     public List<FoodInstance> foodList;
 
-    [SerializeField] private HungerManager _hungerManager;
     
     // Audio
 
@@ -56,9 +55,10 @@ public class ChokeForce : MonoBehaviour
         FoodInstance food = other.GetComponent<FoodInstance>();
         if (food != null) {
             Debug.Log("Food Exited Choke.");
-            _hungerManager.addFood(food.foodSettings.chewCount * 2);
             foodList.Remove(food);
-            _uiManager.increaseScore();
+
+            // TODO handle score increase elsewhere
+            // _uiManager.increaseScore();
         }
     }
 }
