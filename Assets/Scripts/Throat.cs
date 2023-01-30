@@ -33,12 +33,6 @@ public class Throat : MonoBehaviour {
             _audio.PlayOneShot(ChokeStart);
         }
     }
-    
-    // private void OnCollisionEnter2D(Collision2D col) {
-    //     if (col.gameObject.CompareTag("Throat")) {
-    //         Debug.Log("Swallowing THROAT COLLISION");
-    //     }
-    // }
 
     public void Choke(FoodInstance food) {
         var f_rb = food.GetComponent<Rigidbody2D>();

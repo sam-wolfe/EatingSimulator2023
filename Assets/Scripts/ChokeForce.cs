@@ -24,22 +24,21 @@ public class ChokeForce : MonoBehaviour
     
     //------------
     
+    private void Start() {
+        _input.CoughPerformed += HandleCough;
+    }
     
-    private void Update() {
+    private void HandleCough() {
         foreach (var food in foodList) {
-            if (food != null && _input.cough) {
+            if (food != null) {
                 food.GetComponent<Rigidbody2D>().AddForce(
                     Vector2.up*chokeForce, ForceMode2D.Impulse);
-                // TODO play sound effect
             }
         }
 
-        if (_input.cough) {
-            Debug.Log("*cough cough*");
-            _input.cough = false;
-            _throat.ProcessChoking();
-            _audio.PlayOneShot(clips.getRandom());
-        }
+        Debug.Log("*cough cough*");
+        _throat.ProcessChoking();
+        _audio.PlayOneShot(clips.getRandom());
         
     }
 

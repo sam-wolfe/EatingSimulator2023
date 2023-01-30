@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,8 @@ public class InputManager : MonoBehaviour {
     public float jaw = 0f;
     public bool cough;
     public bool food;
+
+    public event Action CoughPerformed;
     
     public void OnTongue(InputAction.CallbackContext context) {
         tongue = context.ReadValue<Vector2>();
@@ -35,6 +38,7 @@ public class InputManager : MonoBehaviour {
     public void OnCough(InputAction.CallbackContext context) {
         switch (context.phase) {
             case InputActionPhase.Started:
+                CoughPerformed?.Invoke();
                 cough = true;
                 break;
             case InputActionPhase.Canceled:
