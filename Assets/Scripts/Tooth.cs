@@ -53,15 +53,16 @@ public class Tooth : MonoBehaviour {
     }
 
     public void BreakTeeth() {
-    topToothSprite.sprite = brokenTeeth;
-    bottomToothSprite.sprite = brokenTeeth;
-    t1.sprite = brokenTeeth;
-    t2.sprite = brokenTeeth;
-    t3.sprite = brokenTeeth;
-    t4.sprite = brokenTeeth;
-    t5.sprite = brokenTeeth;
-    t6.sprite = brokenTeeth;
-    t7.sprite = brokenTeeth;
+        topToothSprite.sprite = brokenTeeth;
+        bottomToothSprite.sprite = brokenTeeth;
+        t1.sprite = brokenTeeth;
+        t2.sprite = brokenTeeth;
+        t3.sprite = brokenTeeth;
+        t4.sprite = brokenTeeth;
+        t5.sprite = brokenTeeth;
+        t6.sprite = brokenTeeth;
+        t7.sprite = brokenTeeth;
+        broken = true;
     }
 
     public void DestroyTeeth() {
