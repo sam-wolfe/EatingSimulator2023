@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class ChewHandler : MonoBehaviour {
 
@@ -11,15 +12,20 @@ public class ChewHandler : MonoBehaviour {
         
     [SerializeField] private AudioSource _audio;
     [SerializeField] private SoundList clips;
-    public event Action OnChew;
     void Start() {
         _tooth.OnToothTouch += HandleChew;
     }
 
     private void HandleChew(GameObject tooth) {
-        // OnChew?.Invoke();
         foreach (var food in foodList) {
-            food.Chew();
+            if (_tooth.broken) {
+                // If teeth are broken only chew food 50% of the time
+                if (Random.Range(0, 100) > 50) {
+                    food.Chew();
+                }
+            } else {
+                food.Chew();
+            }
         }
         _audio.PlayOneShot(clips.getRandom());
     }

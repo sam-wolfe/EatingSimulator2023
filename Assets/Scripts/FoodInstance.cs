@@ -5,15 +5,12 @@ using UnityEngine;
 public class FoodInstance : MonoBehaviour {
 
     [SerializeField] public Food foodSettings; // Out of time, sue me, its public now
-    [SerializeField] public Tooth toothsettings; // Out of time, sue me, its public now
     private MeshFilter _meshFilter;
     private MeshRenderer _meshRenderer;
     
     private int chews;
 
     private void OnEnable() {
-        // _chewHandler = FindObjectOfType<ChewHandler>();
-        // _chewHandler.OnChew += Chew;
 
         _meshFilter = GetComponent<MeshFilter>();
         _meshRenderer = GetComponent<MeshRenderer>();
@@ -21,9 +18,6 @@ public class FoodInstance : MonoBehaviour {
         transform.localScale = new Vector3(foodSettings.radius, foodSettings.radius, foodSettings.radius);
         transform.eulerAngles = new Vector3(transform.eulerAngles.x, 90f, transform.eulerAngles.z);
         chews = foodSettings.chewCount;
-        if (toothsettings.broken) {
-            chews = chews * 2;
-        }
     }
 
     public void Chew() {
