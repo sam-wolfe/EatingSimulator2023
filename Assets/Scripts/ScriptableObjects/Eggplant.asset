@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 1373812959347576, guid: 5abab17cc778e0e4b82405794ea3bf70, type: 3}
   chewCount: 6
-  radius: 2
+  radius: 3
   chewedMesh: {fileID: 4300000, guid: e0244f944582bee458cf9ccc1b53b3f4, type: 2}
   chewedMaterial: {fileID: 2100000, guid: d752f5540d5f62e4b964e39d4c03eb75, type: 2}

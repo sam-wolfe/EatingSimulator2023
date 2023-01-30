@@ -99,7 +99,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodSettings: {fileID: 11400000, guid: c8482fdea418fd74b879bdf9de649bb3, type: 2}
-  toothsettings: {fileID: 0}
 --- !u!50 &3200480990071808122
 Rigidbody2D:
   serializedVersion: 4
@@ -136,4 +135,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.025154037, y: -0.28877118}
   serializedVersion: 2
-  m_Radius: 0.24
+  m_Radius: 0.15
