@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0236b21008df2b746ba683dd8682b6de, type: 3}
+  m_Name: Carrot
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1301151405176600, guid: 56aff3ec1fc023d43855db67754849a1, type: 3}
+  chewCount: 3
+  radius: 4
+  chewedMesh: {fileID: 4300000, guid: e0244f944582bee458cf9ccc1b53b3f4, type: 2}
+  chewedMaterial: {fileID: 2100000, guid: 31d4b9e6d3ee09943ae60f807de1e4d7, type: 2}

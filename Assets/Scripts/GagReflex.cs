@@ -3,6 +3,9 @@ using DefaultNamespace;
 using UnityEngine;
 
 public class GagReflex : MonoBehaviour {
+    
+    [SerializeField] private AudioSource _audio;
+    [SerializeField] private SoundList clips;
 
     private void OnTriggerEnter2D(Collider2D other) {
         FoodInstance food = other.GetComponent<FoodInstance>();
@@ -13,7 +16,7 @@ public class GagReflex : MonoBehaviour {
     }
 
     private void Gag() {
-        
+        _audio.PlayOneShot(clips.getRandom());
     }
 
 }

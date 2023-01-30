@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = System.Random;
 
 public class ChokeForce : MonoBehaviour
 {
@@ -12,6 +13,19 @@ public class ChokeForce : MonoBehaviour
     [SerializeField] private Throat _throat;
     
     public List<FoodInstance> foodList;
+
+    [SerializeField] private HungerManager _hungerManager;
+    
+    // Audio
+
+    [SerializeField] private AudioSource _audio;
+    [SerializeField] private SoundList clips;
+    
+    [SerializeField] private UIManager _uiManager;
+    
+    //------------
+    
+    
     private void Update() {
         foreach (var food in foodList) {
             if (food != null && _input.cough) {
@@ -25,6 +39,7 @@ public class ChokeForce : MonoBehaviour
             Debug.Log("*cough cough*");
             _input.cough = false;
             _throat.ProcessChoking();
+            _audio.PlayOneShot(clips.getRandom());
         }
         
     }
@@ -41,7 +56,9 @@ public class ChokeForce : MonoBehaviour
         FoodInstance food = other.GetComponent<FoodInstance>();
         if (food != null) {
             Debug.Log("Food Exited Choke.");
+            _hungerManager.addFood(food.foodSettings.chewCount * 2);
             foodList.Remove(food);
+            _uiManager.increaseScore();
         }
     }
 }

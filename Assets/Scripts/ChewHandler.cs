@@ -8,6 +8,9 @@ public class ChewHandler : MonoBehaviour {
     [SerializeField] private Tooth _tooth;
     public List<FoodInstance> foodList;
 
+        
+    [SerializeField] private AudioSource _audio;
+    [SerializeField] private SoundList clips;
     public event Action OnChew;
     void Start() {
         _tooth.OnToothTouch += HandleChew;
@@ -18,6 +21,7 @@ public class ChewHandler : MonoBehaviour {
         foreach (var food in foodList) {
             food.Chew();
         }
+        _audio.PlayOneShot(clips.getRandom());
     }
     
     private void OnTriggerEnter2D(Collider2D other) {

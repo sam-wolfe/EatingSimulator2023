@@ -10,6 +10,7 @@ public class InputManager : MonoBehaviour {
     public Vector2 tongue;
     public float jaw = 0f;
     public bool cough;
+    public bool food;
     
     public void OnTongue(InputAction.CallbackContext context) {
         tongue = context.ReadValue<Vector2>();
@@ -18,6 +19,17 @@ public class InputManager : MonoBehaviour {
     public void OnJaw(InputAction.CallbackContext context) {
         jaw = context.ReadValue<float>();
         // Debug.Log(jaw);
+    }
+    
+    public void SpawnFood(InputAction.CallbackContext context) {
+        switch (context.phase) {
+            case InputActionPhase.Started:
+                food = true;
+                break;
+            case InputActionPhase.Canceled:
+                food = false;
+                break;
+        }
     }
     
     public void OnCough(InputAction.CallbackContext context) {

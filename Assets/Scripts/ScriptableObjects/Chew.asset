@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f8beeeab9c1e674bac68d5e2b8a9e56, type: 3}
+  m_Name: Chew
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: d1e064d3938d4704c971c34decd4c424, type: 3}
+  - {fileID: 8300000, guid: a558a61f34ba57d41810de953e04b471, type: 3}
+  - {fileID: 8300000, guid: 2c19fad0deecea4438c42713694bdd2e, type: 3}
+  - {fileID: 8300000, guid: 4595f463d34f2694c9e9a0e146ad651c, type: 3}
