@@ -25,6 +25,10 @@ public class Tooth : MonoBehaviour {
     [SerializeField] private ParticleSystem particleSystem2;
     [SerializeField] private ParticleSystem particleSystem3;
     
+    [SerializeField] private GameObject ToothDebriPrefab1;
+    [SerializeField] private GameObject ToothDebriPrefab2;
+    [SerializeField] private GameObject ToothDebriPrefab3;
+    
 
     private int health = 3;
     public bool broken = false;
@@ -47,8 +51,14 @@ public class Tooth : MonoBehaviour {
             Debug.Log("Teeth broken");
             _audioSource.PlayOneShot(brokenteeth);
             particleSystem1.Play();
+            Instantiate(ToothDebriPrefab1, particleSystem1.transform.position, Quaternion.identity);
+            
             particleSystem2.Play();
+            Instantiate(ToothDebriPrefab2, particleSystem2.transform.position, Quaternion.identity);
+
             particleSystem3.Play();
+            Instantiate(ToothDebriPrefab3, particleSystem3.transform.position, Quaternion.identity);
+
         } else if (broken) {
             _audioSource.PlayOneShot(brokenteeth);
         }

@@ -14,6 +14,8 @@ public class InputManager : MonoBehaviour {
     public bool food;
 
     public event Action CoughPerformed;
+    public event Action SwallowPerformed;
+    public event Action MoveFoodPerformed;
     
     public void OnTongue(InputAction.CallbackContext context) {
         tongue = context.ReadValue<Vector2>();
@@ -44,6 +46,22 @@ public class InputManager : MonoBehaviour {
             case InputActionPhase.Canceled:
                 cough = false;
                 break;
+        }
+    }
+    
+    public void OnMoveFood(InputAction.CallbackContext context) {
+        if (context.phase == InputActionPhase.Started){
+            MoveFoodPerformed?.Invoke();
+            Debug.Log("Get back there!");
+            // TODO add move food force
+        }
+    }
+    
+    public void OnSwallow(InputAction.CallbackContext context) {
+        if (context.phase == InputActionPhase.Started){
+            SwallowPerformed?.Invoke();
+            Debug.Log("GULP!");
+            // TODO add swallow mechanic
         }
     }
 

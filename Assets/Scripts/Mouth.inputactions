@@ -67,6 +67,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "MoveFood",
+                    "type": "Button",
+                    "id": "20fb7d2b-5374-4bcf-a5b9-97fdc7ef6688",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -74,6 +83,17 @@
                     "name": "",
                     "id": "d5dd33e7-7645-42ef-a16f-179e8e43d3fa",
                     "path": "<DualShockGamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Tongue",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "aa764783-d030-449b-85bf-caec4eac9293",
+                    "path": "<XInputController>/leftStick",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -94,8 +114,30 @@
                 },
                 {
                     "name": "",
+                    "id": "b306045d-e068-4e17-b65a-5e68fe6d1216",
+                    "path": "<XInputController>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fork",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "bc774c94-5dde-4ac3-99c5-ac0f35ffab2d",
                     "path": "<DualShockGamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jaw",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "32604acb-89f1-4af2-8055-55fd712e1c9c",
+                    "path": "<XInputController>/rightTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -116,8 +158,19 @@
                 },
                 {
                     "name": "",
+                    "id": "134e2cc8-f1ed-44b1-a15e-d1f64da3ddf9",
+                    "path": "<XInputController>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Swallow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "3b0decbb-55be-4397-8315-f8bada26206c",
-                    "path": "<DualShockGamepad>/leftShoulder",
+                    "path": "<Keyboard>/p",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -138,12 +191,45 @@
                 },
                 {
                     "name": "",
+                    "id": "a25ae5a8-1aa7-427f-ba4f-5c221fc79be1",
+                    "path": "<XInputController>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Cough",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "b50a14b9-0ad0-4a8b-8462-53b641db1844",
-                    "path": "<DualShockGamepad>/rightShoulder",
+                    "path": "<Gamepad>/dpad/up",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "AddFood",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "478d7f82-a873-492c-a91e-7ccc3420de54",
+                    "path": "<DualShockGamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveFood",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "927a1b78-a228-45c9-bc74-3925716aa662",
+                    "path": "<XInputController>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveFood",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

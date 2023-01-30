@@ -5358,6 +5358,9 @@ MonoBehaviour:
   particleSystem1: {fileID: 2124565932}
   particleSystem2: {fileID: 593408247}
   particleSystem3: {fileID: 997290391}
+  ToothDebriPrefab1: {fileID: 3336968464447813796, guid: c0080ecc668d9564386a2d11a88b8056, type: 3}
+  ToothDebriPrefab2: {fileID: 7402558400253610727, guid: ee6ff36a88a848b4d85f72afeda1dfa7, type: 3}
+  ToothDebriPrefab3: {fileID: 4115303518748156576, guid: 57f26ba3add74354d8f0a9a08b6c1b4c, type: 3}
   broken: 0
 --- !u!1 &1190558120
 GameObject:
@@ -5750,7 +5753,19 @@ MonoBehaviour:
     m_ActionId: c0cf1047-6fc7-41a0-839d-ff9840db0836
     m_ActionName: Gamepad/Jaw[/DualSenseGamepadHID/leftTrigger]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1258624922}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: OnSwallow
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 08e498e7-1686-48a5-a99c-72ba501455da
     m_ActionName: Gamepad/Swallow[/DualSenseGamepadHID/leftTrigger]
   - m_PersistentCalls:
@@ -5789,6 +5804,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 5704cab5-d0f6-4fcf-9302-ab0aa7bc0576
     m_ActionName: Gamepad/AddFood[/DualSenseGamepadHID/rightShoulder]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1258624922}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: OnMoveFood
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 20fb7d2b-5374-4bcf-a5b9-97fdc7ef6688
+    m_ActionName: Gamepad/MoveFood[/DualSenseGamepadHID/rightShoulder]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gamepad
