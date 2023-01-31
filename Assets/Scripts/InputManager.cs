@@ -9,6 +9,7 @@ public class InputManager : MonoBehaviour {
     [SerializeField] private PlayerInput _input;
 
     public Vector2 tongue;
+    public Vector2 fork;
     public float jaw = 0f;
     public bool cough;
     public bool food;
@@ -63,6 +64,10 @@ public class InputManager : MonoBehaviour {
             Debug.Log("GULP!");
             // TODO add swallow mechanic
         }
+    }
+
+    public void OnFork(InputAction.CallbackContext context) {
+        fork = context.ReadValue<Vector2>();
     }
 
 }
