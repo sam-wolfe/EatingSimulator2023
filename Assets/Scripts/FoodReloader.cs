@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class FoodReloader : MonoBehaviour {
     
+    [SerializeField] private FoodList _foodList;
     
     private Fork _fork;
+    
     
     void Start() {
         _fork = FindObjectOfType<Fork>();
@@ -17,8 +19,7 @@ public class FoodReloader : MonoBehaviour {
     }
 
     private void LoadFood() {
-        // TODO
-        Debug.Log("Add food to fork.");
-        _fork.LoadFork();
+        var nextFood = _foodList.getRandom();
+        _fork.LoadFork(nextFood);
     }
 }
