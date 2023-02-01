@@ -9,5 +9,4 @@ public class Food : ScriptableObject {
     public Mesh chewedMesh;
     public Material chewedMaterial;
 
-
 }

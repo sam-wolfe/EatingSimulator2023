@@ -10,14 +10,6 @@ public class ToothBreak : MonoBehaviour {
     [SerializeField] private SpriteRenderer _toothSprite;
     [SerializeField] private Sprite brokenTeeth;
 
-    void Start() {
-        
-    }
-
-    void Update() {
-        
-    }
-
     public void Break() {
         _toothSprite.sprite = brokenTeeth;
         if (_toothDebriPrefab != null) {
