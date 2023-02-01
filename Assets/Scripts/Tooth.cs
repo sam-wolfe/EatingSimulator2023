@@ -9,25 +9,13 @@ public class Tooth : MonoBehaviour {
 
     [SerializeField] private SpriteRenderer topToothSprite;
     [SerializeField] private SpriteRenderer bottomToothSprite;
-    [SerializeField] private SpriteRenderer t1;
-    [SerializeField] private SpriteRenderer t2;
-    [SerializeField] private SpriteRenderer t3;
-    [SerializeField] private SpriteRenderer t4;
-    [SerializeField] private SpriteRenderer t5;
-    [SerializeField] private SpriteRenderer t6;
-    [SerializeField] private SpriteRenderer t7;
 
     [SerializeField] private Sprite brokenTeeth;
 
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip brokenteeth;
-    [SerializeField] private ParticleSystem particleSystem1;
-    [SerializeField] private ParticleSystem particleSystem2;
-    [SerializeField] private ParticleSystem particleSystem3;
-    
-    [SerializeField] private GameObject ToothDebriPrefab1;
-    [SerializeField] private GameObject ToothDebriPrefab2;
-    [SerializeField] private GameObject ToothDebriPrefab3;
+
+    [SerializeField] private ToothBreaker _toothBreaker;
     
 
     private int health = 3;
@@ -50,16 +38,10 @@ public class Tooth : MonoBehaviour {
             BreakTeeth();
             Debug.Log("Teeth broken");
             _audioSource.PlayOneShot(brokenteeth);
-            particleSystem1.Play();
-            Instantiate(ToothDebriPrefab1, particleSystem1.transform.position, Quaternion.identity);
             
-            particleSystem2.Play();
-            Instantiate(ToothDebriPrefab2, particleSystem2.transform.position, Quaternion.identity);
-
-            particleSystem3.Play();
-            Instantiate(ToothDebriPrefab3, particleSystem3.transform.position, Quaternion.identity);
 
         } else if (broken) {
+            // TODO maybe only play randomly?
             _audioSource.PlayOneShot(brokenteeth);
         }
     }
@@ -67,19 +49,8 @@ public class Tooth : MonoBehaviour {
     public void BreakTeeth() {
         topToothSprite.sprite = brokenTeeth;
         bottomToothSprite.sprite = brokenTeeth;
-        t1.sprite = brokenTeeth;
-        t2.sprite = brokenTeeth;
-        t3.sprite = brokenTeeth;
-        t4.sprite = brokenTeeth;
-        t5.sprite = brokenTeeth;
-        t6.sprite = brokenTeeth;
-        t7.sprite = brokenTeeth;
         broken = true;
+        _toothBreaker.BreakTeeth();
     }
-
-    public void DestroyTeeth() {
-        
-    }
-
 
 }
