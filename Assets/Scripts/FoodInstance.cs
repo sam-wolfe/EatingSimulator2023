@@ -10,6 +10,8 @@ public class FoodInstance : MonoBehaviour {
     
     private int chews;
 
+    public event Action OnTongueTouch;
+
     private void OnEnable() {
 
         _meshFilter = GetComponent<MeshFilter>();
@@ -41,12 +43,10 @@ public class FoodInstance : MonoBehaviour {
         gameObject.SetActive(false);
     }
     
-    // private void OnCollisionEnter2D(Collision2D col) {
-    //     IFoodProcessor foodProcessor = col.gameObject.GetComponent<IFoodProcessor>();
-    //     if (foodProcessor != null) {
-    //         foodProcessor.IncomingFood(this);
-    //         Debug.Log("apple");
-    //     }
-    // }
+    private void OnCollisionEnter2D(Collision2D col) {
+        if (col.gameObject.CompareTag("Tongue")) {
+            OnTongueTouch?.Invoke();
+        }
+    }
 
 }

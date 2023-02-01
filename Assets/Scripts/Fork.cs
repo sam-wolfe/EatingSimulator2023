@@ -41,24 +41,29 @@ public class Fork : MonoBehaviour {
         if (!_isLoaded) {
             Debug.Log("Add food to fork.");
 
-            var loadedFood = Instantiate(food.prefab, _foodPosition.transform.position, Quaternion.identity);
+            var loadedFood = Instantiate(
+                food.prefab, _foodPosition.transform.position, Quaternion.identity);
         
             _foodBody = loadedFood.GetComponent<Rigidbody2D>();
-            
-            // TODO freeze rotation of food until removed from fork 
+            _foodBody.freezeRotation = true;
+
+            FoodInstance foodInstance = loadedFood.GetComponent<FoodInstance>();
+
+            foodInstance.OnTongueTouch += UnloadFork;
 
             _isLoaded = true;
-        }
-        else {
+        } else {
             Debug.Log("Fork already full");
         }
 
     }
 
     public void UnloadFork() {
-        // TODO figure out how to unload fork
         _isLoaded = false;
-        // _loadedFood = null;
+
+        _foodBody.gameObject.GetComponent<FoodInstance>().OnTongueTouch -= UnloadFork;
+        
+        _foodBody.freezeRotation = false;
         _foodBody = null;
     }
 }

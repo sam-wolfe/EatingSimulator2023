@@ -53,8 +53,7 @@ public class InputManager : MonoBehaviour {
     public void OnMoveFood(InputAction.CallbackContext context) {
         if (context.phase == InputActionPhase.Started){
             MoveFoodPerformed?.Invoke();
-            Debug.Log("Get back there!");
-            // TODO add move food force
+            // Debug.Log("Get back there!");
         }
     }
     
