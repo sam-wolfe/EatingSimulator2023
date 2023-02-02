@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Tongue : MonoBehaviour
@@ -15,6 +16,8 @@ public class Tongue : MonoBehaviour
     
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip _tongueCutSound;
+    
+    public event Action OnTongueCut;
     
     void Start() {
         _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -36,5 +39,6 @@ public class Tongue : MonoBehaviour
         bloodParticles2.transform.parent = transform;
         bloodParticles2.Play();
         _audioSource.PlayOneShot(_tongueCutSound);
+        OnTongueCut?.Invoke();
     }
 }

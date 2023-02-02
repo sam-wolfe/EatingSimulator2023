@@ -16,6 +16,7 @@ public class Tooth : MonoBehaviour {
 
     [SerializeField] private ToothBreaker _toothBreaker;
     
+    public event Action OnTeethBroken;
 
     private int health = 3;
     public bool broken = false;
@@ -49,6 +50,7 @@ public class Tooth : MonoBehaviour {
         bottomToothSprite.sprite = brokenTeeth;
         _audioSource.PlayOneShot(brokenteeth);
         broken = true;
+        OnTeethBroken?.Invoke();
     }
 
 }

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class ForkKillWall : MonoBehaviour {
@@ -7,6 +8,8 @@ public class ForkKillWall : MonoBehaviour {
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip _deathSound;
     [SerializeField] private GameManager _gameManager;
+    
+    public event Action OnForkTouch;
     
     private void OnTriggerEnter2D(Collider2D other) {
             if (other.tag == "Fork") {
@@ -20,5 +23,6 @@ public class ForkKillWall : MonoBehaviour {
         _audioSource.PlayOneShot(_deathSound);
         Instantiate(_bloodPrefab, transform.position, Quaternion.identity);
         _gameManager.Invoke("GameOver", 3f);
+        OnForkTouch?.Invoke();
     }
 }

@@ -12,12 +12,5 @@ public class ToothBreaker : MonoBehaviour {
         }
         _tooth.BreakTeeth();
     }
-    
-    void Start() {
-        
-    }
 
-    void Update() {
-        
-    }
 }
