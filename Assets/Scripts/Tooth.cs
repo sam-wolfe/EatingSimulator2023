@@ -27,29 +27,28 @@ public class Tooth : MonoBehaviour {
         } else if (other.tag == "Gums") {
             Debug.Log("Amputation");
             OnToothClamp?.Invoke(other.gameObject);
-            DamageTeeth();
+            // DamageTeeth();
         }
     }
 
-    public void DamageTeeth() {
-        health--;
-        if (health <= 0 && !broken) {
-            BreakTeeth();
-            Debug.Log("Teeth broken");
-            _audioSource.PlayOneShot(brokenteeth);
-            
-
-        } else if (broken) {
-            // TODO maybe only play randomly?
-            _audioSource.PlayOneShot(brokenteeth);
-        }
-    }
+    // public void DamageTeeth() {
+    //     health--;
+    //     if (health <= 0 && !broken) {
+    //         BreakTeeth();
+    //         Debug.Log("Teeth broken");
+    //         
+    //
+    //     } else if (broken) {
+    //         // TODO maybe only play randomly?
+    //         _audioSource.PlayOneShot(brokenteeth);
+    //     }
+    // }
 
     public void BreakTeeth() {
         topToothSprite.sprite = brokenTeeth;
         bottomToothSprite.sprite = brokenTeeth;
+        _audioSource.PlayOneShot(brokenteeth);
         broken = true;
-        _toothBreaker.BreakTeeth();
     }
 
 }

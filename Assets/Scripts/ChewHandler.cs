@@ -7,7 +7,14 @@ using Random = UnityEngine.Random;
 public class ChewHandler : MonoBehaviour {
 
     [SerializeField] private Tooth _tooth;
+    [SerializeField] private Tongue _tongue;
     public List<FoodInstance> foodList;
+    
+    [SerializeField] private ForkDetector _forkDetector;
+    [SerializeField] private TongueCutter _tongueDetector;
+
+    [SerializeField]
+    private ToothBreaker _toothBreaker;
 
         
     [SerializeField] private AudioSource _audio;
@@ -27,6 +34,15 @@ public class ChewHandler : MonoBehaviour {
                 food.Chew();
             }
         }
+                        
+        if (_forkDetector.forkPresent && !_tooth.broken) {
+            _toothBreaker.BreakTeeth();
+        }
+        
+        if (_tongueDetector.tonguePresent && !_tongue.isCut) {
+            _tongue.CutTongue();
+        }
+        
         _audio.PlayOneShot(clips.getRandom());
     }
     
