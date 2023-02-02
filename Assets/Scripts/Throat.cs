@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
 using Random = UnityEngine.Random;
 
 public class Throat : MonoBehaviour {
@@ -24,6 +25,8 @@ public class Throat : MonoBehaviour {
     [SerializeField] private AudioClip ChokeStart;
 
     //------------
+    [SerializeField] private TextMeshProUGUI chokingText;
+    [SerializeField] private GameObject chokingTextParent;
 
     private void OnTriggerEnter2D(Collider2D other) {
         FoodInstance food = other.GetComponent<FoodInstance>();
@@ -44,6 +47,7 @@ public class Throat : MonoBehaviour {
         isChoking = true;
         airLeft = maxAirLeft;
         OnAirDeplete?.Invoke(airLeft);
+        chokingTextParent.SetActive(true);
         StartCoroutine(Choke());
     }
     
@@ -53,8 +57,18 @@ public class Throat : MonoBehaviour {
             airLeft--;
             OnAirDeplete?.Invoke(airLeft);
         }
+        chokingTextParent.SetActive(false);
     }
-    
+
+    private void Update() {
+        if (isChoking) {
+            chokingTextParent.transform.position = new Vector3(
+                chokingTextParent.transform.position.x + Random.Range(-0.5f, 0.5f),
+                chokingTextParent.transform.position.y + Random.Range(-0.5f, 0.5f),
+                chokingTextParent.transform.position.z);
+        }
+    }
+
 
     public void ProcessChoking() {
         // Returns true if was choking and is now cleared
